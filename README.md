@@ -69,14 +69,14 @@ Windows Security and System Event Logs.
 Confirmed real-time Windows Security Event Logs flowing
 into Splunk — 58 clean readable events including EventCode,
 Account_Name, ComputerName, and Source_Network_Address fields.
-![Splunk showing 58 clean Windows Security events flowing in real time](event_code.png)
+![Splunk showing 58 clean Windows Security events flowing in real time](event-code.png)
 
 ### Step 4 — Brute Force Attack Simulation from Kali
 
 Launched a live RDP brute force attack using Hydra from
 Kali Linux (192.168.135.130) against the Windows 10 VM
 administrator account on port 3389.
-![Hydra brute force attack running on Kali Linux against Windows 10 RDP](hydra_attack.png)
+![Hydra brute force attack running on Kali Linux against Windows 10 RDP](hydra-attack.png)
 
 ```bash
 hydra -l administrator -P /usr/share/wordlists/rockyou.txt \
@@ -95,7 +95,7 @@ index=main source="WinEventLog:Security" EventCode=4625
 
 Result: 86 failed login attempts from 192.168.135.130
 detected against the administrator account in under 3 minutes.
-![Splunk detecting 86 failed logins from Kali IP 192.168.135.130](splunk_detection.png)
+![Splunk detecting 86 failed logins from Kali IP 192.168.135.130](splunk-detection.png)
 
 ### Step 6 — Detection Alert Created
 
